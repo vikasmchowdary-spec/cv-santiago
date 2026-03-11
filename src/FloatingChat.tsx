@@ -382,7 +382,7 @@ export default function FloatingChat({ lang }: FloatingChatProps) {
                 <img
                   src="/foto-avatar-sm.webp"
                   alt={lang === 'en' ? 'Chat with Santi' : 'Chat con Santi'}
-                  className="w-full h-full rounded-full object-cover [transform:scaleX(-1)]"
+                  className="w-full h-full rounded-full object-cover"
                   width={56}
                   height={56}
                 />
@@ -440,7 +440,7 @@ export default function FloatingChat({ lang }: FloatingChatProps) {
                   <img
                     src="/foto-avatar-sm.webp"
                     alt="santifer avatar"
-                    className="w-10 h-10 rounded-full object-cover ring-2 ring-primary/20 [transform:scaleX(-1)]"
+                    className="w-10 h-10 rounded-full object-cover ring-2 ring-primary/20"
                     width={40}
                     height={40}
                     loading="lazy"
