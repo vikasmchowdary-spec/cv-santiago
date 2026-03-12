@@ -193,6 +193,8 @@ export default function SelfHealingChatbot({ lang = 'en' }: { lang?: Lang }) {
           detail: s.detail,
         }))} />
         <Callout>{s.rag.callout}</Callout>
+        <Callout className="bg-accent/10 border-accent/40">{s.rag.recursivityCallout}</Callout>
+        <Prose>{s.rag.indexedArticles}</Prose>
 
         {/* ================================================================ */}
         {/*  DEFENSE                                                         */}
@@ -202,6 +204,7 @@ export default function SelfHealingChatbot({ lang = 'en' }: { lang?: Lang }) {
           title: l.title,
           detail: l.detail,
         }))} />
+        <Callout className="bg-accent/10 border-accent/40">{s.defense.linkedInCallout}</Callout>
         <Callout>{s.defense.callout}</Callout>
 
         {/* ================================================================ */}
