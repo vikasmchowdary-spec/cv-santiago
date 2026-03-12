@@ -237,7 +237,7 @@ export default function FloatingChat({ lang }: FloatingChatProps) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  /** Drain fullTextRef word-by-word into the UI via drainPosRef cursor */
+  /** Drain fullTextRef character-by-character for smooth typing effect */
   const startDrain = () => {
     if (drainTimerRef.current) return; // already draining
     drainTimerRef.current = setInterval(() => {
@@ -245,11 +245,7 @@ export default function FloatingChat({ lang }: FloatingChatProps) {
       const pos = drainPosRef.current;
 
       if (pos < full.length) {
-        // Find next word boundary (end of next whitespace-delimited token)
-        const remaining = full.slice(pos);
-        const match = remaining.match(/^\s*\S+\s*/);
-        const advance = match ? match[0].length : remaining.length;
-        drainPosRef.current = pos + advance;
+        drainPosRef.current = pos + 1;
 
         const currentText = full.slice(0, drainPosRef.current);
         const sources = pendingRagSourcesRef.current;
@@ -273,7 +269,7 @@ export default function FloatingChat({ lang }: FloatingChatProps) {
         setIsStreaming(false);
       }
       // pos === full.length but stream active — wait for more text
-    }, 180);
+    }, 30);
   };
 
   const sendMessage = async (messageText?: string) => {
