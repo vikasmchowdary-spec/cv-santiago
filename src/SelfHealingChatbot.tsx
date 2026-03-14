@@ -385,7 +385,7 @@ export default function SelfHealingChatbot({ lang = 'en' }: { lang?: Lang }) {
         <FaqSection heading={t.faq.heading} items={t.faq.items} />
 
         {/* Easter egg */}
-        <details className="mx-auto mt-12 max-w-xs cursor-pointer text-center text-sm text-muted-foreground">
+        <details className="mx-auto mt-12 max-w-md cursor-pointer text-center text-sm text-muted-foreground">
           <summary className="select-none hover:text-foreground transition-colors">
             {lang === 'es' ? '¿Escuchaste eso?' : 'Did you hear that?'}
           </summary>
