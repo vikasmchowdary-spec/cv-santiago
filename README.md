@@ -25,7 +25,7 @@ A production-grade interactive portfolio that **demonstrates the skills it descr
 - **Closed Loop** — Trace → online scoring → quality < 0.7 → auto-generate test → CI gate blocks deploy
 - **Voice Mode** — OpenAI Realtime API, audio-to-audio, shared RAG pipeline, ~$0.25/session
 - **6 Published Case Studies** — Bilingual (ES/EN) with JSON-LD, prerendered HTML, cross-linked RAG, and interactive architecture diagrams
-- **Interactive Architecture Diagram** — GSAP-animated SVG with narrated audio, pan/zoom, dark mode sync. [Explore it →](https://santifer.io/chatbot/architecture-diagram.html)
+- **Interactive Architecture Diagram** — GSAP-animated SVG with narrated audio, pan/zoom, dark mode sync. [Explore it →](https://santifer.io/self-healing-chatbot#architecture)
 - **GEO-ready** — `llms.txt`, structured data (JSON-LD), AI crawler-friendly robots.txt
 
 ---
@@ -47,8 +47,8 @@ A production-grade interactive portfolio that **demonstrates the skills it descr
 
 ## Chatbot Architecture
 
-[![Interactive Architecture Diagram](public/chatbot/diagram-thumbnail.webp)](https://santifer.io/chatbot/architecture-diagram.html)
-> **[Explore the interactive diagram →](https://santifer.io/chatbot/architecture-diagram.html)** 10 phases · narrated audio · zoom + pan
+[![Interactive Architecture Diagram](public/chatbot/diagram-thumbnail.webp)](https://santifer.io/self-healing-chatbot#architecture)
+> **[Explore the interactive diagram →](https://santifer.io/self-healing-chatbot#architecture)** 10 phases · narrated audio · zoom + pan
 
 ```
 User message → FloatingChat.tsx → api/chat.js (Vercel Edge)
@@ -318,7 +318,7 @@ Un portfolio interactivo de nivel producción que **demuestra las habilidades qu
 - **Closed Loop** — Traza → scoring online → quality < 0.7 → auto-genera test → CI gate bloquea deploy
 - **Modo voz** — OpenAI Realtime API, audio-to-audio, mismo pipeline RAG, ~$0.25/sesión
 - **6 Case Studies publicados** — Bilingües (ES/EN) con JSON-LD, HTML prerenderizado, RAG cross-linked y diagramas de arquitectura interactivos
-- **Diagrama de Arquitectura Interactivo** — SVG animado con GSAP, audio narrado, pan/zoom, sync dark mode. [Explorar →](https://santifer.io/chatbot/architecture-diagram.html)
+- **Diagrama de Arquitectura Interactivo** — SVG animado con GSAP, audio narrado, pan/zoom, sync dark mode. [Explorar →](https://santifer.io/chatbot-que-se-cura-solo#architecture)
 - **GEO-ready** — `llms.txt`, datos estructurados (JSON-LD), robots.txt amigable con crawlers IA
 
 ---
@@ -340,8 +340,8 @@ Un portfolio interactivo de nivel producción que **demuestra las habilidades qu
 
 ## Arquitectura del Chatbot
 
-[![Diagrama Interactivo de Arquitectura](public/chatbot/diagram-thumbnail.webp)](https://santifer.io/chatbot/architecture-diagram.html)
-> **[Explorar el diagrama interactivo →](https://santifer.io/chatbot/architecture-diagram.html)** 10 fases · audio narrado · zoom + pan
+[![Diagrama Interactivo de Arquitectura](public/chatbot/diagram-thumbnail.webp)](https://santifer.io/chatbot-que-se-cura-solo#architecture)
+> **[Explorar el diagrama interactivo →](https://santifer.io/chatbot-que-se-cura-solo#architecture)** 10 fases · audio narrado · zoom + pan
 
 ```
 Mensaje → FloatingChat.tsx → api/chat.js (Vercel Edge)
