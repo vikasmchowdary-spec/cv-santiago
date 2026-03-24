@@ -572,16 +572,18 @@ function validateStructural(): Issue[] {
     }
   }
 
-  // S4. Home dateModified format YYYY-MM-DD
+  // S4. Home dateModified format — ISO 8601 (YYYY-MM-DD or YYYY-MM-DDThh:mm:ss±hh:mm)
   if (existsSync(indexHtmlPath)) {
     const indexHtml = readFileSync(indexHtmlPath, 'utf-8')
     const dateModMatch = indexHtml.match(/"dateModified"\s*:\s*"([^"]*)"/)
     if (dateModMatch) {
       const dateVal = dateModMatch[1]
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(dateVal)) {
+      const isValidDate = /^\d{4}-\d{2}-\d{2}$/.test(dateVal)
+      const isValidDateTime = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}$/.test(dateVal)
+      if (!isValidDate && !isValidDateTime) {
         issues.push({
           severity: 'error',
-          msg: `Home dateModified not YYYY-MM-DD: "${dateVal}"`,
+          msg: `Home dateModified not valid ISO 8601: "${dateVal}"`,
           skill: '/seo schema',
         })
       }
