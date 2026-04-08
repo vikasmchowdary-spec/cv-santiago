@@ -1526,9 +1526,9 @@ function App() {
                   <Github className="w-3.5 h-3.5" />
                   <span>career-ops</span>
                   <Star className="w-3 h-3 text-yellow-500" />
-                  {/* hero-stats:career-ops:stars */}<span className="font-medium">22.8K</span>
+                  {/* hero-stats:career-ops:stars */}<span className="font-medium">23.3K</span>
                   <GitFork className="w-3 h-3" />
-                  {/* hero-stats:career-ops:forks */}<span>4.2K</span>
+                  {/* hero-stats:career-ops:forks */}<span>4.3K</span>
                 </Link>
               </div>
 
@@ -2541,14 +2541,15 @@ function App() {
           )}
 
           {/* Reddit Posts */}
+          <div className="grid md:grid-cols-2 gap-4">
           {t.redditPosts?.map((rp, i) => (
             <AnimatedSection key={rp.url} delay={0.15 + i * 0.1}>
-              <div className="mb-4">
+              <div className="h-full">
                 <a
                   href={rp.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col p-5 rounded-2xl bg-card border border-border/50 border-t-2 border-t-[#FF4500] hover:border-border transition-colors group"
+                  className="flex flex-col p-5 rounded-2xl bg-card border border-border/50 border-t-2 border-t-[#FF4500] hover:border-border transition-colors group h-full"
                 >
                   <div className="flex gap-3">
                     <img src="/foto-avatar.webp" alt="" role="presentation" width={384} height={384} className="w-10 h-10 rounded-full shrink-0 mt-0.5" />
@@ -2580,9 +2581,12 @@ function App() {
               </div>
             </AnimatedSection>
           ))}
+          </div>
+
+          <div className="h-6" />
 
           {/* LinkedIn Posts */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {t.linkedinPosts.items.map((post: { hook: string; reactions: string; comments: string; url: string }, i: number) => (
               <AnimatedSection key={`li-${i}`} delay={0.2 + i * 0.1}>
                 <a
@@ -2639,10 +2643,11 @@ function App() {
                       </span>
                       <h3 className="font-display font-bold mt-2 text-gradient-theme">{talk.title}</h3>
                       <p className="text-sm text-muted-foreground mt-2 flex-1">{talk.desc}</p>
-                      <span className="mt-4 inline-flex items-center gap-2 text-xs text-muted-foreground/60">
-                        <Lock className="w-3.5 h-3.5" />
-                        {t.speaking.comingSoon}
-                      </span>
+                      {t.speaking.comingSoon && (
+                        <span className="mt-4 inline-flex items-center gap-2 text-xs text-muted-foreground/60">
+                          {t.speaking.comingSoon}
+                        </span>
+                      )}
                     </div>
                   </div>
                 ) : (
