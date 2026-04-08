@@ -157,6 +157,43 @@ async function main() {
     anyChanged = true
   }
 
+  // 3. Update hero stats in App.tsx (comment markers: hero-stats:owner/repo:stars/forks)
+  const APP_PATH = resolve(__dirname, '../src/App.tsx')
+  let appTsx = readFileSync(APP_PATH, 'utf-8')
+  let appChanged = false
+
+  for (const repo of [{ owner: 'santifer', repo: 'career-ops', label: 'career-ops (hero)' }]) {
+    const stats = await fetchGitHubStats(repo.owner, repo.repo)
+    if (!stats) continue
+
+    const s = formatCount(stats.stars)
+    const f = formatCount(stats.forks)
+
+    const starsRegex = new RegExp(
+      `(hero-stats:${repo.repo}:stars \\*/\\}<span[^>]*>)[^<]+(<\\/span>)`,
+    )
+    const forksRegex = new RegExp(
+      `(hero-stats:${repo.repo}:forks \\*/\\}<span[^>]*>)[^<]+(<\\/span>)`,
+    )
+
+    const newApp = appTsx
+      .replace(starsRegex, `$1${s}$2`)
+      .replace(forksRegex, `$1${f}$2`)
+
+    if (newApp !== appTsx) {
+      appTsx = newApp
+      appChanged = true
+      console.log(`  ✓ ${repo.label}: ${s} stars, ${f} forks`)
+    } else {
+      console.log(`  ⏭ ${repo.label}: no changes (${s} stars, ${f} forks)`)
+    }
+  }
+
+  if (appChanged) {
+    writeFileSync(APP_PATH, appTsx, 'utf-8')
+    anyChanged = true
+  }
+
   if (anyChanged) {
     console.log('\n✅ GitHub stats updated')
   } else {
