@@ -3,13 +3,13 @@ export const seo = {
     title:
       'santifer | Builder of Career-Ops · Agentes IA · Open Source',
     description:
-      'Creador de Career-Ops (28.1K+ estrellas en GitHub). Construye sistemas IA en producción. Head of Applied AI. De automatizar un negocio de 16 años a herramientas open source usadas por miles.',
+      'Creador de Career-Ops (28.5K+ estrellas en GitHub). Construye sistemas IA en producción. Head of Applied AI. De automatizar un negocio de 16 años a herramientas open source usadas por miles.',
   },
   en: {
     title:
       'santifer | Builder of Career-Ops · AI Agents · Open Source',
     description:
-      'Creator of Career-Ops (28.1K+ GitHub stars). Building AI systems that run in production. Head of Applied AI. From automating a 16-year business to open source tools used by thousands.',
+      'Creator of Career-Ops (28.5K+ GitHub stars). Building AI systems that run in production. Head of Applied AI. From automating a 16-year business to open source tools used by thousands.',
   },
 };
 
@@ -176,8 +176,8 @@ export const translations = {
           desc: 'Pipeline HITL de búsqueda de empleo: la IA evalúa ofertas periódicamente en 10 dimensiones (scoring A-F), genera CVs PDF optimizados para ATS por oferta, y pre-rellena aplicaciones — yo reviso, filtro y decido cuáles enviar. Procesamiento batch de 48+ ofertas en paralelo (arquitectura conductor + workers), escaneo de portales con deduplicación, y framing adaptativo por arquetipo de rol. Integrado con **Life OS** como skill especializado.',
           tech: ['Claude Code', 'Batch Architecture', 'WebSearch', 'HITL Design'],
           link: 'github.com/santifer/career-ops',
-          stars: '28.1K',
-          forks: '5.3K',
+          stars: '28.5K',
+          forks: '5.4K',
           caseStudyUrl: '/career-ops',
           caseStudyLabel: 'Leer: AI Job Search multi-agente',
         },
@@ -188,8 +188,8 @@ export const translations = {
           desc: 'CV interactivo con SDLC aumentado con IA. Construido con **Claudeable**, monitorizado con **Claude Pulse**, animaciones debuggeadas con **Claude Eye**. Prerender SSR, i18n bilingüe y SEO automatizado.',
           tech: ['React 19', 'TypeScript', 'Tailwind', 'Vite', 'Motion', 'Vercel'],
           link: 'github.com/santifer/cv-santiago',
-          stars: '251',
-          forks: '100',
+          stars: '257',
+          forks: '101',
         },
         {
           title: 'Self-Healing Chatbot',
@@ -522,14 +522,14 @@ export const translations = {
       replies: '85',
       retweets: '461',
       likes: '3.7K',
-      views: '511.7K',
+      views: '512.4K',
       cta: 'Ver en X',
       url: 'https://x.com/santifer/status/2041403685696053741',
     },
     redditPosts: [
       {
         hook: 'Construí un sistema de búsqueda de empleo con Claude Code que puntuó 740+ ofertas y me consiguió trabajo. Acabo de hacerlo open source.',
-        upvotes: '2659',
+        upvotes: '2665',
         comments: '220',
         subreddit: 'r/ClaudeAI',
         cta: 'Leer en Reddit',
@@ -537,7 +537,7 @@ export const translations = {
       },
       {
         hook: 'Automaticé mi búsqueda de empleo con agentes IA — 516 evaluaciones, 66 aplicaciones, zero screening manual.',
-        upvotes: '550',
+        upvotes: '551',
         comments: '351',
         subreddit: 'r/SideProject',
         cta: 'Leer en Reddit',
@@ -979,8 +979,8 @@ export const translations = {
           desc: "HITL job search pipeline — AI periodically evaluates offers across 10 dimensions (A-F scoring), spins up ATS-optimized PDF resumes per listing, and pre-fills applications. I review, filter, and decide which ones to ship. Batch-processes 48+ offers in parallel (conductor + workers), scans portals with dedup, and adapts narrative framing per role archetype. Plugs into **Life OS** as a specialized skill.",
           tech: ['Claude Code', 'Batch Architecture', 'WebSearch', 'HITL Design'],
           link: 'github.com/santifer/career-ops',
-          stars: '28.1K',
-          forks: '5.3K',
+          stars: '28.5K',
+          forks: '5.4K',
           caseStudyUrl: '/career-ops-system',
           caseStudyLabel: 'Case Study: AI Job Search',
         },
@@ -991,8 +991,8 @@ export const translations = {
           desc: 'Interactive CV with AI-augmented SDLC. Built with **Claudeable**, monitored with **Claude Pulse**, animations debugged with **Claude Eye**. SSR prerender, bilingual i18n, and automated SEO.',
           tech: ['React 19', 'TypeScript', 'Tailwind', 'Vite', 'Motion', 'Vercel'],
           link: 'github.com/santifer/cv-santiago',
-          stars: '251',
-          forks: '100',
+          stars: '257',
+          forks: '101',
         },
         {
           title: 'Self-Healing Chatbot',
@@ -1321,14 +1321,14 @@ export const translations = {
       replies: '85',
       retweets: '461',
       likes: '3.7K',
-      views: '511.7K',
+      views: '512.4K',
       cta: 'View on X',
       url: 'https://x.com/santifer/status/2041403685696053741',
     },
     redditPosts: [
       {
         hook: 'I built an AI job search system with Claude Code that scored 740+ offers and landed me a job. Just open sourced it.',
-        upvotes: '2659',
+        upvotes: '2665',
         comments: '220',
         subreddit: 'r/ClaudeAI',
         cta: 'Read on Reddit',
@@ -1336,7 +1336,7 @@ export const translations = {
       },
       {
         hook: 'I automated my job search with AI agents — 516 evaluations, 66 applications, zero manual screening.',
-        upvotes: '550',
+        upvotes: '551',
         comments: '351',
         subreddit: 'r/SideProject',
         cta: 'Read on Reddit',
