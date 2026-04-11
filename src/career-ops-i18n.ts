@@ -183,12 +183,12 @@ export const careerOpsContent = {
       },
       results: {
         heading: '¿Qué Resultados Ha Conseguido Career-Ops?',
-        body: 'El sistema lleva 2 meses en producción. 631 reports sobre 516 ofertas únicas (algunas re-evaluadas tras cambios de criterios). Números vivos — el tracker crece cada día.',
+        body: 'El sistema lleva 2 meses en producción. 631 reports sobre 516 ofertas únicas (algunas re-evaluadas tras cambios de criterios). Números vivos — el tracker crece cada día. El proyecto es open source y ha alcanzado 28K+ estrellas en GitHub, 2600+ upvotes en r/ClaudeAI, y ha sido referenciado en blogs de Francia, China y Corea.',
         metrics: [
           { value: '631', label: 'Reports generados' },
-          { value: '68', label: 'Aplicaciones enviadas' },
+          { value: '28K+', label: 'GitHub stars' },
           { value: '354', label: 'PDFs generados' },
-          { value: '0', label: 'Re-evaluaciones' },
+          { value: '2600+', label: 'Upvotes r/ClaudeAI' },
         ],
       },
       stack: {
@@ -449,12 +449,12 @@ export const careerOpsContent = {
       },
       results: {
         heading: 'What Results Has Career-Ops Achieved?',
-        body: 'The system has been in production for 2 months. 631 reports across 516 unique offers (some re-evaluated after criteria changes). Live numbers — the tracker grows every day.',
+        body: 'The system has been in production for 2 months. 631 reports across 516 unique offers (some re-evaluated after criteria changes). Live numbers — the tracker grows every day. The project is open source and has reached 28K+ GitHub stars, 2,600+ upvotes on r/ClaudeAI, and has been referenced in blogs from France, China, and Korea.',
         metrics: [
           { value: '631', label: 'Reports generated' },
-          { value: '68', label: 'Applications sent' },
+          { value: '28K+', label: 'GitHub stars' },
           { value: '354', label: 'PDFs generated' },
-          { value: '0', label: 'Re-evaluations' },
+          { value: '2,600+', label: 'Upvotes r/ClaudeAI' },
         ],
       },
       stack: {
