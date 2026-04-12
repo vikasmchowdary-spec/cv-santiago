@@ -14,10 +14,10 @@ export const careerOpsContent = {
       breadcrumbCurrent: 'Career-Ops',
     },
     header: {
-      kicker: 'Case Study: Sistema en producción',
-      h1: 'Career-Ops: Cómo un Agente IA Automatiza Mi Búsqueda de Empleo',
-      subtitle: 'Construí un sistema multi-agente que evalúa ofertas en 10 dimensiones, crea CV con IA personalizados por oferta y automatiza aplicaciones. 631 evaluaciones, 12 modos, una persona.',
-      badge: 'Sistema en producción — en uso activo',
+      kicker: 'Case Study: De proyecto personal a 30K+ stars',
+      h1: 'Career-Ops: Cómo un Agente IA Automatizó Mi Búsqueda de Empleo',
+      subtitle: 'Construí un sistema multi-agente para automatizar mi búsqueda de empleo. Funcionó: ahora soy Head of Applied AI. Luego lo abrí como open source y se hizo viral — 30K+ estrellas en GitHub y viral.',
+      badge: 'Misión cumplida — Open Source · 30K+ ⭐',
       date: '17 mar 2026',
     },
     heroMetrics: [
@@ -28,7 +28,7 @@ export const careerOpsContent = {
       { value: '680', label: 'URLs dedup' },
     ],
     tldr: 'Un sistema multi-agente construido con Claude Code que automatiza la búsqueda de empleo: evalúa ofertas con scoring de 10 dimensiones (A-F), genera PDFs ATS-optimized personalizados, rellena formularios vía Playwright y procesa en batch con workers paralelos. HITL: la IA analiza, yo decido.',
-    metaCallout: 'La ironía: el sistema demuestra exactamente las competencias que los puestos piden — arquitectura multi-agente, automatización, LLMOps y HITL. Y no, no es hacer trampa: Career-Ops automatiza el análisis, no la decisión. Yo leo cada report y reviso cada PDF antes de enviar.',
+    metaCallout: 'La ironía: construí un sistema multi-agente para buscar trabajo en multi-agente. El sistema demostró las competencias que los puestos pedían — mejor que cualquier entrevista. Y no, no es hacer trampa: Career-Ops automatiza el análisis, no la decisión.',
     internalLinks: {
       chatbot: {
         text: 'El Chatbot Que Se Cura Solo | Case Study',
@@ -49,8 +49,8 @@ export const careerOpsContent = {
     },
     sections: {
       intro: {
-        hook: 'Ya no aplico a ofertas de trabajo. Un multi-agent system las evalúa, genera mi CV personalizado y prepara la aplicación. Yo reviso y decido. La primera semana buscando trabajo en IA lo hice todo manual: leer JDs, mapear skills, rellenar formularios. La segunda semana ya no aplicaba — estaba construyendo Career-Ops.',
-        body: '631 evaluaciones después, Career-Ops toma más decisiones de filtrado que yo. Es un AI job search tool construido como multi-agent system: lee ofertas, las puntúa en 10 dimensiones, genera AI resumes personalizados y automatiza aplicaciones. Yo reviso y decido. La IA hace el trabajo analítico.',
+        hook: 'Construí un sistema de IA para buscar trabajo. Funcionó — ahora soy Head of Applied AI. Luego lo publiqué en GitHub y explotó: 30K+ estrellas, viral, artículos en Francia, China y Corea. La primera semana buscando trabajo en IA lo hice todo manual. La segunda semana ya no aplicaba — estaba construyendo Career-Ops.',
+        body: '631 evaluaciones después, Career-Ops filtraba mejor que yo. Un AI job search tool construido como multi-agent system: lee ofertas, las puntúa en 10 dimensiones, genera CV personalizados y prepara aplicaciones. Yo revisaba y decidía. La IA hacía el trabajo analítico. El sistema demostró exactamente las competencias que los puestos pedían — y eso no pasó desapercibido.',
       },
       theProblem: {
         heading: '¿Por Qué Necesité Automatizar Mi Búsqueda de Empleo?',
@@ -158,12 +158,12 @@ export const careerOpsContent = {
           heading: '6 Arquetipos',
           headers: ['Arquetipo', 'Proof Point Principal'],
           rows: [
-            ['AI Platform / LLMOps', 'Self-Healing Chatbot (71 evals, closed-loop)'],
-            ['Agentic Workflows', 'Jacobo (4 agentes, 80h/mes automatizadas)'],
-            ['Technical AI PM', 'Business OS (2,100 campos, 50 automations)'],
-            ['AI Solutions Architect', 'pSEO (4,730 páginas, 10.8x tráfico)'],
-            ['AI FDE', 'Jacobo (vendido, operando en producción)'],
-            ['AI Transformation Lead', 'Exit 2025 (16 años, comprador mantiene sistemas)'],
+            ['AI Platform / LLMOps', 'Self-Healing Chatbot (71 evals, closed-loop)', '/chatbot-que-se-cura-solo'],
+            ['Agentic Workflows', 'Jacobo (4 agentes, 80h/mes automatizadas)', '/agente-ia-jacobo'],
+            ['Technical AI PM', 'Business OS (2,100 campos, 50 automations)', '/business-os-para-airtable'],
+            ['AI Solutions Architect', 'pSEO (4,730 páginas, 10.8x tráfico)', '/seo-programatico'],
+            ['AI FDE', 'Jacobo (vendido, operando en producción)', '/agente-ia-jacobo'],
+            ['AI Transformation Lead', 'Exit 2025 (16 años, comprador mantiene sistemas)', ''],
           ],
         },
         callout: 'El mismo CV. 6 framings distintos. Todo real — las keywords se reformulan, nunca se inventan.',
@@ -183,13 +183,23 @@ export const careerOpsContent = {
       },
       results: {
         heading: '¿Qué Resultados Ha Conseguido Career-Ops?',
-        body: 'El sistema lleva 2 meses en producción. 631 reports sobre 516 ofertas únicas (algunas re-evaluadas tras cambios de criterios). Números vivos — el tracker crece cada día. El proyecto es open source y ha alcanzado 28K+ estrellas en GitHub, 2600+ upvotes en r/ClaudeAI, y ha sido referenciado en blogs de Francia, China y Corea.',
+        body: 'El resultado más importante: conseguí el trabajo. Ahora soy Head of Applied AI. Career-Ops evaluó 631 ofertas, generó 354 PDFs personalizados y filtró el ruido para que yo pudiera centrarme en las oportunidades que realmente encajaban.',
         metrics: [
           { value: '631', label: 'Reports generados' },
-          { value: '28K+', label: 'GitHub stars' },
+          { value: '30K+', label: 'GitHub stars' },
           { value: '354', label: 'PDFs generados' },
-          { value: '2600+', label: 'Upvotes r/ClaudeAI' },
+          { value: '2,600+', label: 'Upvotes r/ClaudeAI' },
         ],
+        aftermath: {
+          heading: '¿Qué Pasó Después?',
+          body: 'Cuando dejé de necesitar Career-Ops, lo publiqué en GitHub. En una semana pasó de repositorio privado a viral — 30K+ estrellas, 5K+ forks, y artículos en blogs de Francia, China y Corea que no me conocían de nada. El proyecto acabó demostrando más competencias que cualquier proceso de selección.',
+          highlights: [
+            { value: '30K+', label: 'GitHub stars en 1 semana' },
+            { value: '5K+', label: 'Forks' },
+            { value: '4', label: 'Idiomas (EN, FR, ZH, KO)' },
+            { value: '6', label: 'Países con cobertura' },
+          ],
+        },
       },
       stack: {
         heading: 'Stack',
@@ -228,13 +238,17 @@ export const careerOpsContent = {
             title: 'El sistema ES el portfolio',
             detail: 'Construir un sistema multi-agente para buscar trabajo en multi-agente es la prueba más directa de competencia. No necesito explicar que sé hacer esto — lo estoy usando.',
           },
+          {
+            title: 'Abre el código cuando ya no lo necesites',
+            detail: 'Career-Ops fue privado mientras lo usaba. Cuando conseguí el trabajo, lo publiqué. En una semana tenía 30K estrellas. La lección: el mejor momento para abrir un proyecto es cuando ya demostró su valor en producción real.',
+          },
         ],
       },
       cta: {
-        heading: 'Pregunta',
-        body: 'Abre el chat y pregunta cómo construí Career-Ops. O revisa los otros sistemas que demuestran las mismas competencias.',
-        ctaLabel: 'Abrir chat',
-        ctaHref: '#chat',
+        heading: 'Explora el Código',
+        body: 'Career-Ops es open source. Revisa la arquitectura, los skill files, y el scoring framework en GitHub. O abre el chat y pregúntame cómo lo construí.',
+        ctaLabel: 'Ver en GitHub',
+        ctaHref: 'https://github.com/santifer/career-ops',
       },
     },
     faq: {
@@ -262,7 +276,7 @@ export const careerOpsContent = {
         },
         {
           q: 'Es replicable?',
-          a: 'Requiere Claude Code con acceso a Playwright y un directorio de trabajo estructurado. Los skill files definen la lógica de cada modo. Es replicable, no es plug-and-play.',
+          a: 'Sí — el código es open source en GitHub (github.com/santifer/career-ops). Requiere Claude Code con acceso a Playwright. Los skill files definen la lógica de cada modo. 30K+ personas ya lo han visto, forkeado o adaptado.',
         },
       ],
     },
@@ -280,10 +294,10 @@ export const careerOpsContent = {
       breadcrumbCurrent: 'Career-Ops',
     },
     header: {
-      kicker: 'Case Study: Production system',
-      h1: 'Career-Ops: How I Built My Own AI Job Search Tool',
-      subtitle: 'A multi-agent system that scores offers across 10 dimensions, works as an AI resume builder per listing, and automates job applications with HITL. 631 evaluations, 12 modes, one person.',
-      badge: 'Live production system — actively in use',
+      kicker: 'Case Study: From side project to 30K+ stars',
+      h1: 'Career-Ops: How I Built an AI Job Search System That Got Me Hired',
+      subtitle: 'I built a multi-agent system to automate my job search. It worked — I am now Head of Applied AI. Then I open-sourced it and it went viral — 30K+ GitHub stars and viral.',
+      badge: 'Mission accomplished — Open Source · 30K+ ⭐',
       date: 'Mar 17, 2026',
     },
     heroMetrics: [
@@ -294,7 +308,7 @@ export const careerOpsContent = {
       { value: '680', label: 'URLs deduped' },
     ],
     tldr: 'A multi-agent system built with Claude Code that automates the job search: scores offers across 10 dimensions (A-F), generates ATS-optimized PDFs per offer, fills forms via Playwright, and batch-processes with parallel workers. HITL design: AI analyzes, I decide.',
-    metaCallout: 'The irony: the system demonstrates the exact competencies the target roles require — multi-agent architecture, automation, LLMOps, and HITL design. And no, it is not gaming the system: Career-Ops automates analysis, not decisions. I read every report and review every PDF before sending.',
+    metaCallout: 'The irony: I built a multi-agent system to search for multi-agent roles. The system demonstrated the competencies better than any interview could. And no, it is not gaming the system: Career-Ops automates analysis, not decisions.',
     internalLinks: {
       chatbot: {
         text: 'The Self-Healing Chatbot | Case Study',
@@ -315,8 +329,8 @@ export const careerOpsContent = {
     },
     sections: {
       intro: {
-        hook: 'I no longer apply to jobs. A multi-agent system evaluates them, generates my personalized resume, and prepares the application. I review and decide. Week one of my AI job search was all manual: read JDs, map skills, fill forms. By week two I had stopped applying — I was building Career-Ops.',
-        body: '631 evaluations later, Career-Ops makes more filtering decisions than I do. An AI-powered job search tool built as a multi-agent system: reads job descriptions, scores them across 10 dimensions, generates AI resumes per listing, and automates job applications. I review and decide. The AI does the analytical work.',
+        hook: 'I built an AI system to search for a job. It worked — I am now Head of Applied AI. Then I published it on GitHub and it exploded: 30K+ stars, viral, articles in France, China, and Korea. Week one of my AI job search was all manual. By week two I had stopped applying — I was building Career-Ops.',
+        body: '631 evaluations later, Career-Ops was filtering better than I was. An AI-powered job search tool built as a multi-agent system: reads job descriptions, scores them across 10 dimensions, generates personalized resumes, and prepares applications. I reviewed and decided. The AI did the analytical work. The system demonstrated exactly the competencies the target roles required — and that did not go unnoticed.',
       },
       theProblem: {
         heading: 'Why Did I Need to Automate My Job Search?',
@@ -424,12 +438,12 @@ export const careerOpsContent = {
           heading: '6 Archetypes',
           headers: ['Archetype', 'Primary Proof Point'],
           rows: [
-            ['AI Platform / LLMOps', 'Self-Healing Chatbot (71 evals, closed-loop)'],
-            ['Agentic Workflows', 'Jacobo (4 agents, 80h/mo automated)'],
-            ['Technical AI PM', 'Business OS (2,100 fields, 50 automations)'],
-            ['AI Solutions Architect', 'pSEO (4,730 pages, 10.8x traffic)'],
-            ['AI FDE', 'Jacobo (sold, running in production)'],
-            ['AI Transformation Lead', 'Exit 2025 (16 years, buyer kept all systems)'],
+            ['AI Platform / LLMOps', 'Self-Healing Chatbot (71 evals, closed-loop)', '/self-healing-chatbot'],
+            ['Agentic Workflows', 'Jacobo (4 agents, 80h/mo automated)', '/ai-agent-jacobo'],
+            ['Technical AI PM', 'Business OS (2,100 fields, 50 automations)', '/business-os-for-airtable'],
+            ['AI Solutions Architect', 'pSEO (4,730 pages, 10.8x traffic)', '/programmatic-seo'],
+            ['AI FDE', 'Jacobo (sold, running in production)', '/ai-agent-jacobo'],
+            ['AI Transformation Lead', 'Exit 2025 (16 years, buyer kept all systems)', ''],
           ],
         },
         callout: 'Same CV. 6 different framings. All real — keywords get reformulated, never fabricated.',
@@ -449,13 +463,23 @@ export const careerOpsContent = {
       },
       results: {
         heading: 'What Results Has Career-Ops Achieved?',
-        body: 'The system has been in production for 2 months. 631 reports across 516 unique offers (some re-evaluated after criteria changes). Live numbers — the tracker grows every day. The project is open source and has reached 28K+ GitHub stars, 2,600+ upvotes on r/ClaudeAI, and has been referenced in blogs from France, China, and Korea.',
+        body: 'The most important result: I got the job. I am now Head of Applied AI. Career-Ops evaluated 631 offers, generated 354 personalized PDFs, and filtered the noise so I could focus on the opportunities that truly fit.',
         metrics: [
           { value: '631', label: 'Reports generated' },
-          { value: '28K+', label: 'GitHub stars' },
+          { value: '30K+', label: 'GitHub stars' },
           { value: '354', label: 'PDFs generated' },
           { value: '2,600+', label: 'Upvotes r/ClaudeAI' },
         ],
+        aftermath: {
+          heading: 'What Happened Next?',
+          body: 'When I no longer needed Career-Ops, I published it on GitHub. In one week it went from private repo to viral — 30K+ stars, 5K+ forks, and articles in blogs from France, China, and Korea by people who had never heard of me. The project ended up demonstrating more competencies than any hiring process could.',
+          highlights: [
+            { value: '30K+', label: 'GitHub stars in 1 week' },
+            { value: '5K+', label: 'Forks' },
+            { value: '4', label: 'Languages (EN, FR, ZH, KO)' },
+            { value: '6', label: 'Countries with coverage' },
+          ],
+        },
       },
       stack: {
         heading: 'Stack',
@@ -494,13 +518,17 @@ export const careerOpsContent = {
             title: 'The system IS the portfolio',
             detail: 'Building a multi-agent system to search for multi-agent roles is the most direct proof of competence. I do not need to explain that I can do this — I am using it.',
           },
+          {
+            title: 'Open-source it when you no longer need it',
+            detail: 'Career-Ops was private while I was using it. When I got the job, I published it. One week later it had 30K stars. The lesson: the best time to open-source a project is when it has already proven its value in real production.',
+          },
         ],
       },
       cta: {
-        heading: 'Ask',
-        body: 'Open the chat and ask how I built Career-Ops. Or check the other systems that demonstrate the same competencies.',
-        ctaLabel: 'Open chat',
-        ctaHref: '#chat',
+        heading: 'Explore the Code',
+        body: 'Career-Ops is open source. Check the architecture, skill files, and scoring framework on GitHub. Or open the chat and ask me how I built it.',
+        ctaLabel: 'View on GitHub',
+        ctaHref: 'https://github.com/santifer/career-ops',
       },
     },
     faq: {
@@ -528,7 +556,7 @@ export const careerOpsContent = {
         },
         {
           q: 'Is it replicable?',
-          a: 'Requires Claude Code with Playwright access and a structured working directory. Skill files define the logic for each mode. Replicable, but not plug-and-play.',
+          a: 'Yes — the code is open source on GitHub (github.com/santifer/career-ops). Requires Claude Code with Playwright access. Skill files define the logic for each mode. 30K+ people have already seen, forked, or adapted it.',
         },
       ],
     },

@@ -31,6 +31,11 @@ CLAUDE.md
 **/.claude/
 chatbot/audit/
 
+# Private negotiation/audit files
+*santiferirepair*
+plan-*.md
+audit-*.md
+
 # Backups and drafts
 backup/
 _backup_*/

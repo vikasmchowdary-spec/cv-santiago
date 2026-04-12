@@ -172,7 +172,8 @@ export default function AboutPage({ lang = 'es' }: { lang?: AboutLang }) {
           ))}
         </section>
 
-        {/* Seeking */}
+        {/* Seeking — hidden when empty */}
+        {t.seeking && t.roles.length > 0 && (
         <section className="mb-10 p-4 rounded-lg bg-primary/5 border border-primary/20">
           <p className="text-sm font-medium text-primary mb-2">{t.seeking}</p>
           <div className="flex flex-wrap gap-2">
@@ -183,6 +184,7 @@ export default function AboutPage({ lang = 'es' }: { lang?: AboutLang }) {
             ))}
           </div>
         </section>
+        )}
 
         {/* Timeline */}
         <section className="mb-10">

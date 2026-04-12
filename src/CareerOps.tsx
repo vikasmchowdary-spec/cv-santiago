@@ -107,7 +107,7 @@ export default function CareerOps({ lang = 'en' }: { lang?: Lang }) {
       <StatusBadge text={t.header.badge} />
       <MetricsGrid items={t.heroMetrics} columns={5} compact />
 
-      <GitHubRepoBadge repo="santifer/career-ops" stars="30.1K" forks="5.8K" lang={lang} />
+      <GitHubRepoBadge repo="santifer/career-ops" stars="31.0K" forks="6.1K" lang={lang} />
 
       <Callout className="bg-accent/10 border-accent/40">{t.tldr}</Callout>
       <Callout>{t.metaCallout}</Callout>
@@ -283,11 +283,27 @@ export default function CareerOps({ lang = 'en' }: { lang?: Lang }) {
         </div>
 
         <H3>{s.pdf.archetypes.heading}</H3>
-        <DataTable
-          headers={[...s.pdf.archetypes.headers]}
-          rows={s.pdf.archetypes.rows.map(r => [...r])}
-          highlightColumn={1}
-        />
+        <div className="overflow-x-auto mb-6">
+          <table className="w-full text-base">
+            <thead>
+              <tr className="border-b border-border">
+                {s.pdf.archetypes.headers.map((h, i) => (
+                  <th key={i} className="py-2.5 pr-6 text-left font-semibold text-muted-foreground text-sm tracking-wider uppercase last:pr-0">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {s.pdf.archetypes.rows.map((r, i) => (
+                <tr key={i} className="border-b border-border hover:bg-white/5 transition-colors">
+                  <td className="py-4 pr-6 text-sm text-muted-foreground font-medium">{r[0]}</td>
+                  <td className={`py-4 pr-6 text-sm last:pr-0 ${r[2] ? 'text-primary' : 'text-muted-foreground'}`}>
+                    {r[2] ? <Link to={r[2]} className="hover:underline">{r[1]}</Link> : r[1]}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <Callout>{s.pdf.callout}</Callout>
 
         {/* ================================================================ */}
@@ -306,6 +322,14 @@ export default function CareerOps({ lang = 'en' }: { lang?: Lang }) {
         <H2 id="results">{s.results.heading}</H2>
         <Prose>{s.results.body}</Prose>
         <MetricsGrid items={s.results.metrics} columns={4} />
+
+        {'aftermath' in s.results && (s.results as any).aftermath && (
+          <>
+            <H3>{(s.results as any).aftermath.heading}</H3>
+            <Prose>{(s.results as any).aftermath.body}</Prose>
+            <MetricsGrid items={(s.results as any).aftermath.highlights} columns={4} compact />
+          </>
+        )}
 
         {/* ================================================================ */}
         {/*  STACK                                                           */}
