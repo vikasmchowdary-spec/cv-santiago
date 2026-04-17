@@ -3,13 +3,13 @@ export const seo = {
     title:
       'santifer | Builder of Career-Ops · Agentes IA · Open Source',
     description:
-      'Creador de Career-Ops (35.2K+ estrellas en GitHub). Construye sistemas IA en producción. Head of Applied AI. De automatizar un negocio de 16 años a herramientas open source usadas por miles.',
+      'Creador de Career-Ops (35.3K+ estrellas en GitHub). Construye sistemas IA en producción. Head of Applied AI. De automatizar un negocio de 16 años a herramientas open source usadas por miles.',
   },
   en: {
     title:
       'santifer | Builder of Career-Ops · AI Agents · Open Source',
     description:
-      'Creator of Career-Ops (35.2K+ GitHub stars). Building AI systems that run in production. Head of Applied AI. From automating a 16-year business to open source tools used by thousands.',
+      'Creator of Career-Ops (35.3K+ GitHub stars). Building AI systems that run in production. Head of Applied AI. From automating a 16-year business to open source tools used by thousands.',
   },
 };
 
@@ -176,7 +176,7 @@ export const translations = {
           desc: 'Pipeline HITL de búsqueda de empleo: la IA evalúa ofertas periódicamente en 10 dimensiones (scoring A-F), genera CVs PDF optimizados para ATS por oferta, y pre-rellena aplicaciones — yo reviso, filtro y decido cuáles enviar. Procesamiento batch de 48+ ofertas en paralelo (arquitectura conductor + workers), escaneo de portales con deduplicación, y framing adaptativo por arquetipo de rol. Integrado con **Life OS** como skill especializado.',
           tech: ['Claude Code', 'Batch Architecture', 'WebSearch', 'HITL Design'],
           link: 'github.com/santifer/career-ops',
-          stars: '35.2K',
+          stars: '35.3K',
           forks: '7.0K',
           caseStudyUrl: '/career-ops',
           caseStudyLabel: 'Leer: AI Job Search multi-agente',
@@ -188,8 +188,8 @@ export const translations = {
           desc: 'CV interactivo con SDLC aumentado con IA. Construido con **Claudeable**, monitorizado con **Claude Pulse**, animaciones debuggeadas con **Claude Eye**. Prerender SSR, i18n bilingüe y SEO automatizado.',
           tech: ['React 19', 'TypeScript', 'Tailwind', 'Vite', 'Motion', 'Vercel'],
           link: 'github.com/santifer/cv-santiago',
-          stars: '351',
-          forks: '141',
+          stars: '352',
+          forks: '142',
         },
         {
           title: 'Self-Healing Chatbot',
@@ -365,6 +365,9 @@ export const translations = {
         jacobo: {
           title: 'Agente AI Omnicanal "Jacobo"',
           badge: '~90% autoservicio',
+          github: 'santifer/jacobo-workflows',
+          stars: '119',
+          forks: '38',
           desc: 'Voz (ElevenLabs) + WhatsApp (n8n / WATI) + Aircall cloud PBX. Orquestación de sub-agentes especializados vía tool calling.',
           items: [
             {
@@ -394,6 +397,9 @@ export const translations = {
         webSeo: {
           title: 'Web Programática + SEO Automatizado',
           badge: 'Única en el sector en España',
+          github: 'santifer/santifer-irepair',
+          stars: '14',
+          forks: '8',
           desc: '100% custom-made (2024). Headless CMS en Airtable como fuente de verdad, integrado con ERP, generando web en Astro con SEO programático.',
           items: [
             {
@@ -521,17 +527,17 @@ export const translations = {
       quoteLikes: '6.7K',
       quoteViews: '1.7M',
       quoteUrl: 'https://x.com/garrytan/status/2040891664617848993',
-      replies: '89',
+      replies: '90',
       retweets: '474',
       likes: '3.7K',
-      views: '527.7K',
+      views: '527.8K',
       cta: 'Ver en X',
       url: 'https://x.com/santifer/status/2041403685696053741',
     },
     redditPosts: [
       {
         hook: 'Construí un sistema de búsqueda de empleo con Claude Code que puntuó 740+ ofertas y me consiguió trabajo. Acabo de hacerlo open source.',
-        upvotes: '2734',
+        upvotes: '2743',
         comments: '239',
         subreddit: 'r/ClaudeAI',
         cta: 'Leer en Reddit',
@@ -539,7 +545,7 @@ export const translations = {
       },
       {
         hook: 'Automaticé mi búsqueda de empleo con agentes IA — 516 evaluaciones, 66 aplicaciones, zero screening manual.',
-        upvotes: '569',
+        upvotes: '566',
         comments: '356',
         subreddit: 'r/SideProject',
         cta: 'Leer en Reddit',
@@ -547,7 +553,7 @@ export const translations = {
       },
       {
         hook: 'Construí un agente IA con WhatsApp + voz en n8n que gestiona el 90% de la atención al cliente. Vendí el negocio y el comprador lo mantuvo sin mí.',
-        upvotes: '302',
+        upvotes: '301',
         comments: '48',
         subreddit: 'r/n8n',
         cta: 'Leer en Reddit',
@@ -981,7 +987,7 @@ export const translations = {
           desc: "HITL job search pipeline — AI periodically evaluates offers across 10 dimensions (A-F scoring), spins up ATS-optimized PDF resumes per listing, and pre-fills applications. I review, filter, and decide which ones to ship. Batch-processes 48+ offers in parallel (conductor + workers), scans portals with dedup, and adapts narrative framing per role archetype. Plugs into **Life OS** as a specialized skill.",
           tech: ['Claude Code', 'Batch Architecture', 'WebSearch', 'HITL Design'],
           link: 'github.com/santifer/career-ops',
-          stars: '35.2K',
+          stars: '35.3K',
           forks: '7.0K',
           caseStudyUrl: '/career-ops-system',
           caseStudyLabel: 'Case Study: AI Job Search',
@@ -993,8 +999,8 @@ export const translations = {
           desc: 'Interactive CV with AI-augmented SDLC. Built with **Claudeable**, monitored with **Claude Pulse**, animations debugged with **Claude Eye**. SSR prerender, bilingual i18n, and automated SEO.',
           tech: ['React 19', 'TypeScript', 'Tailwind', 'Vite', 'Motion', 'Vercel'],
           link: 'github.com/santifer/cv-santiago',
-          stars: '351',
-          forks: '141',
+          stars: '352',
+          forks: '142',
         },
         {
           title: 'Self-Healing Chatbot',
@@ -1166,6 +1172,9 @@ export const translations = {
         jacobo: {
           title: 'Omnichannel AI Agent "Jacobo"',
           badge: '~90% self-service',
+          github: 'santifer/jacobo-workflows',
+          stars: '119',
+          forks: '38',
           desc: 'Voice (ElevenLabs) + WhatsApp (n8n / WATI) + Aircall cloud PBX. Sub-agent orchestration via tool calling.',
           items: [
             {
@@ -1195,6 +1204,9 @@ export const translations = {
         webSeo: {
           title: 'Programmatic Web + Automated SEO',
           badge: 'Only one in sector in Spain',
+          github: 'santifer/santifer-irepair',
+          stars: '14',
+          forks: '8',
           desc: '100% custom-made (2024). Headless CMS in Airtable as source of truth, integrated with ERP, generating Astro website with programmatic SEO.',
           items: [
             {
@@ -1322,17 +1334,17 @@ export const translations = {
       quoteLikes: '6.7K',
       quoteViews: '1.7M',
       quoteUrl: 'https://x.com/garrytan/status/2040891664617848993',
-      replies: '89',
+      replies: '90',
       retweets: '474',
       likes: '3.7K',
-      views: '527.7K',
+      views: '527.8K',
       cta: 'View on X',
       url: 'https://x.com/santifer/status/2041403685696053741',
     },
     redditPosts: [
       {
         hook: 'I built an AI job search system with Claude Code that scored 740+ offers and landed me a job. Just open sourced it.',
-        upvotes: '2734',
+        upvotes: '2743',
         comments: '239',
         subreddit: 'r/ClaudeAI',
         cta: 'Read on Reddit',
@@ -1340,7 +1352,7 @@ export const translations = {
       },
       {
         hook: 'I automated my job search with AI agents — 516 evaluations, 66 applications, zero manual screening.',
-        upvotes: '569',
+        upvotes: '566',
         comments: '356',
         subreddit: 'r/SideProject',
         cta: 'Read on Reddit',
@@ -1348,7 +1360,7 @@ export const translations = {
       },
       {
         hook: 'I built a WhatsApp + voice AI agent in n8n that handles 90% of customer service. Sold the business, the buyer kept it running without me.',
-        upvotes: '302',
+        upvotes: '301',
         comments: '48',
         subreddit: 'r/n8n',
         cta: 'Read on Reddit',

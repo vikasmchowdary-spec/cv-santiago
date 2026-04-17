@@ -1526,7 +1526,7 @@ function App() {
                   <Github className="w-3.5 h-3.5" />
                   <span>career-ops</span>
                   <Star className="w-3 h-3 text-yellow-500" />
-                  {/* hero-stats:career-ops:stars */}<span className="font-medium">35.2K</span>
+                  {/* hero-stats:career-ops:stars */}<span className="font-medium">35.3K</span>
                   <GitFork className="w-3 h-3" />
                   {/* hero-stats:career-ops:forks */}<span>7.0K</span>
                 </Link>
@@ -1732,6 +1732,14 @@ function App() {
                   <span className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 group-hover/cta:bg-primary/20 group-hover/cta:border-primary/50 transition-all duration-200">{t.experience.santifer.jacobo.soldWith}</span>
                   <ChevronRight className="w-4 h-4 group-hover/cta:translate-x-0.5 transition-transform duration-200" />
                 </Link>
+                <div className="flex items-center gap-3 pt-4">
+                  <a href={`https://github.com/${t.experience.santifer.jacobo.github}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs text-primary hover:underline">
+                    <Github className="w-4 h-4" />
+                    {lang === 'es' ? 'Ver código' : 'View code'}
+                  </a>
+                  <span className="flex items-center gap-1 text-xs text-muted-foreground"><Star className="w-3.5 h-3.5 text-yellow-500" />{t.experience.santifer.jacobo.stars}</span>
+                  <span className="flex items-center gap-1 text-xs text-muted-foreground"><GitFork className="w-3.5 h-3.5" />{t.experience.santifer.jacobo.forks}</span>
+                </div>
               </div>
             </AnimatedSection>
 
@@ -1767,6 +1775,14 @@ function App() {
                   <span className="px-4 py-2 rounded-lg bg-accent/10 border border-accent/30 group-hover/cta:bg-accent/20 group-hover/cta:border-accent/50 transition-all duration-200">{t.experience.santifer.webSeo.codeAvailable}</span>
                   <ChevronRight className="w-4 h-4 group-hover/cta:translate-x-0.5 transition-transform duration-200" />
                 </Link>
+                <div className="flex items-center gap-3 pt-4">
+                  <a href={`https://github.com/${t.experience.santifer.webSeo.github}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs text-accent hover:underline">
+                    <Github className="w-4 h-4" />
+                    {lang === 'es' ? 'Ver código' : 'View code'}
+                  </a>
+                  <span className="flex items-center gap-1 text-xs text-muted-foreground"><Star className="w-3.5 h-3.5 text-yellow-500" />{t.experience.santifer.webSeo.stars}</span>
+                  <span className="flex items-center gap-1 text-xs text-muted-foreground"><GitFork className="w-3.5 h-3.5" />{t.experience.santifer.webSeo.forks}</span>
+                </div>
               </div>
             </AnimatedSection>
 

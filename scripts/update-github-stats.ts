@@ -34,6 +34,7 @@ const I18N_REPOS = [
   { owner: 'santifer', repo: 'claude-pulse', label: 'claude-pulse (i18n)' },
   { owner: 'santifer', repo: 'claude-eye', label: 'claude-eye (i18n)' },
   { owner: 'santifer', repo: 'claudeable', label: 'claudeable (i18n)' },
+  { owner: 'santifer', repo: 'santifer-irepair', label: 'santifer-irepair (i18n)' },
 ]
 
 function formatCount(n: number): string {
@@ -124,23 +125,23 @@ async function main() {
     const s = formatCount(stats.stars)
     const f = formatCount(stats.forks)
 
-    // Match blocks that contain the repo link and update stars/forks within
-    const linkPattern = `github.com/${repo.owner}/${repo.repo}`
+    // Match blocks that contain the repo link/github and update stars/forks within
+    const linkPattern = `${repo.owner}/${repo.repo}`
     if (!i18n.includes(linkPattern)) {
       console.log(`  ⏭ ${repo.label}: not found in i18n.ts`)
       continue
     }
 
-    // Find blocks with this repo link and update stars line
+    // Find blocks with this repo (via link: or github: field) and update stars line
     const blockRegex = new RegExp(
-      `(link: '${linkPattern.replace(/\//g, '\\/')}',\\n\\s+stars: ')[^']+(')`
+      `((?:link|github): '(?:github\\.com\\/)?${linkPattern.replace(/\//g, '\\/')}',\\n\\s+stars: ')[^']+(')`
       , 'g')
     let newI18n = i18n.replace(blockRegex, `$1${s}$2`)
 
     // Update forks if present
     if (stats.forks > 0) {
       const forksRegex = new RegExp(
-        `(link: '${linkPattern.replace(/\//g, '\\/')}',\\n\\s+stars: '[^']+',\\n\\s+forks: ')[^']+(')`
+        `((?:link|github): '(?:github\\.com\\/)?${linkPattern.replace(/\//g, '\\/')}',\\n\\s+stars: '[^']+',\\n\\s+forks: ')[^']+(')`
         , 'g')
       newI18n = newI18n.replace(forksRegex, `$1${f}$2`)
     }
