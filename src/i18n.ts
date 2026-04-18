@@ -550,7 +550,7 @@ export const translations = {
     redditPosts: [
       {
         hook: 'Construí un sistema de búsqueda de empleo con Claude Code que puntuó 740+ ofertas y me consiguió trabajo. Acabo de hacerlo open source.',
-        upvotes: '2753',
+        upvotes: '2746',
         comments: '240',
         subreddit: 'r/ClaudeAI',
         cta: 'Leer en Reddit',
@@ -558,7 +558,7 @@ export const translations = {
       },
       {
         hook: 'Automaticé mi búsqueda de empleo con agentes IA — 516 evaluaciones, 66 aplicaciones, zero screening manual.',
-        upvotes: '569',
+        upvotes: '567',
         comments: '358',
         subreddit: 'r/SideProject',
         cta: 'Leer en Reddit',
@@ -566,7 +566,7 @@ export const translations = {
       },
       {
         hook: 'Construí un agente IA con WhatsApp + voz en n8n que gestiona el 90% de la atención al cliente. Vendí el negocio y el comprador lo mantuvo sin mí.',
-        upvotes: '301',
+        upvotes: '300',
         comments: '48',
         subreddit: 'r/n8n',
         cta: 'Leer en Reddit',
@@ -662,8 +662,8 @@ export const translations = {
         },
         {
           year: '2001 - 2009',
-          org: 'ETSI',
-          title: 'Ing. de Telecomunicaciones',
+          org: 'ETSI Universidad de Sevilla',
+          title: 'Ingeniería de Telecomunicaciones',
           desc: 'Especialidad en Telemática',
         },
       ],
@@ -1370,7 +1370,7 @@ export const translations = {
     redditPosts: [
       {
         hook: 'I built an AI job search system with Claude Code that scored 740+ offers and landed me a job. Just open sourced it.',
-        upvotes: '2753',
+        upvotes: '2746',
         comments: '240',
         subreddit: 'r/ClaudeAI',
         cta: 'Read on Reddit',
@@ -1378,7 +1378,7 @@ export const translations = {
       },
       {
         hook: 'I automated my job search with AI agents — 516 evaluations, 66 applications, zero manual screening.',
-        upvotes: '569',
+        upvotes: '567',
         comments: '358',
         subreddit: 'r/SideProject',
         cta: 'Read on Reddit',
@@ -1386,7 +1386,7 @@ export const translations = {
       },
       {
         hook: 'I built a WhatsApp + voice AI agent in n8n that handles 90% of customer service. Sold the business, the buyer kept it running without me.',
-        upvotes: '301',
+        upvotes: '300',
         comments: '48',
         subreddit: 'r/n8n',
         cta: 'Read on Reddit',
@@ -1482,7 +1482,7 @@ export const translations = {
         },
         {
           year: '2001 - 2009',
-          org: 'ETSI',
+          org: 'ETSI Universidad de Sevilla',
           title: 'Telecommunications Engineering',
           desc: 'Telematics specialization',
         },

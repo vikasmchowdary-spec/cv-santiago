@@ -73,7 +73,7 @@ Santifer iRepair (2009-2025) — Fundador & Product Lead (AI Automation). Repara
 - 2025: AI Product Management Bootcamp (Maven) - Liderado por Marily Nika (ex-Google PM). AI PRDs, diseño de agentes. Proyecto ganador.
 - 2024: Master en Inteligencia Artificial (BIGSEO) - IA Generativa aplicada a negocios
 - 2023: Master en SEO (BIGSEO) - SEO técnico, contenido y analítica
-- 2001 - 2009: Ing. de Telecomunicaciones, especialidad Telemática (ETSI)
+- 2001 - 2009: Ingeniería de Telecomunicaciones, especialidad Telemática (ETSI Universidad de Sevilla)
 
 **Certificaciones:**
 - 2026: Introduction to Model Context Protocol (Anthropic)

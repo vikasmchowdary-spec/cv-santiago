@@ -46,7 +46,7 @@ export const aboutContent = {
       'Maven — AI Product Management Bootcamp (Teaching Fellow)',
       'BIGSEO — Máster en Inteligencia Artificial',
       'BIGSEO — Máster en SEO',
-      'ETSI — Universidad de Sevilla',
+      'ETSI Universidad de Sevilla — Ingeniería de Telecomunicaciones',
     ],
     pressHeading: 'Prensa',
     press: [
@@ -112,7 +112,7 @@ export const aboutContent = {
       'Maven — AI Product Management Bootcamp (Teaching Fellow)',
       'BIGSEO — Master in Artificial Intelligence',
       'BIGSEO — Master in SEO',
-      'ETSI — Universidad de Sevilla',
+      'ETSI Universidad de Sevilla — Telecommunications Engineering',
     ],
     pressHeading: 'Press',
     press: [
