@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Sun, Moon, House, X, ChevronRight } from 'lucide-react'
 import { translations, type Lang } from './i18n'
 import { getAltPaths, getPageTitles, getSectionLabels, getEsSlugs } from './articles/registry'
@@ -208,19 +208,12 @@ function FlagEN({ className = "w-4 h-4" }: { className?: string }) {
   )
 }
 
-/** Shared controls: flag lang pill + theme circle */
-function NavControls({ altPath, altLabel, lang, isDark, toggleTheme }: {
-  altPath: string; altLabel: string; lang: Lang; isDark: boolean; toggleTheme: () => void
+/** Shared controls: theme circle only */
+function NavControls({ isDark, toggleTheme }: {
+  isDark: boolean; toggleTheme: () => void
 }) {
   return (
     <div className="flex items-center gap-2">
-      <Link
-        to={altPath}
-        className="inline-flex items-center justify-center gap-1.5 w-[4.5rem] h-10 rounded-full bg-card border border-border text-sm font-medium text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
-      >
-        {lang === 'es' ? <FlagES className="w-3.5 h-3.5" /> : <FlagEN className="w-3.5 h-3.5" />}
-        {altLabel}
-      </Link>
       <button
         onClick={toggleTheme}
         className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center shadow-lg hover:border-primary/50 hover:shadow-primary/20 hover:shadow-xl transition-colors"
@@ -235,12 +228,7 @@ function NavControls({ altPath, altLabel, lang, isDark, toggleTheme }: {
 export default function GlobalNav() {
   const { pathname, isHome, lang, pageTitle } = useLang()
   const { isDark, toggleTheme } = useTheme()
-  const { showBanner, dismiss, animateBanner } = useLanguageBanner(lang)
-  const navigate = useNavigate()
   const activeSection = useActiveSection(pathname, !isHome)
-
-  const altPath = ALT_PATH[pathname] || (lang === 'es' ? '/en' : '/')
-  const altLabel = lang === 'es' ? 'ES' : 'EN'
 
   const t = translations[lang]
   const hasBar = !isHome
@@ -262,37 +250,9 @@ export default function GlobalNav() {
   const animateBackLink = !isHome && !backLinkShown.current
   if (!isHome) backLinkShown.current = true
 
-  const switchLang = () => {
-    dismiss()
-    navigate(altPath)
-  }
-
-  const controls = <NavControls altPath={altPath} altLabel={altLabel} lang={lang} isDark={isDark} toggleTheme={toggleTheme} />
+  const controls = <NavControls isDark={isDark} toggleTheme={toggleTheme} />
 
   const fade = (duration: string) => ({ animation: `nav-fade-in ${duration} ease-out` })
-
-  // Banner message (right-aligned, near lang pill)
-  const bannerMessage = showBanner ? (
-    <div
-      className="flex items-center gap-2.5 text-sm"
-      style={animateBanner ? fade('0.4s') : undefined}
-    >
-      <span className="text-muted-foreground hidden lg:inline">{t.ui.languageBanner}</span>
-      <button
-        onClick={switchLang}
-        className="inline-flex items-center gap-1 font-medium text-primary hover:text-primary/80 transition-colors"
-      >
-        {t.ui.languageBannerSwitchPrefix}{lang === 'es' ? <FlagEN className="w-3.5 h-3.5 mx-0.5" /> : <FlagES className="w-3.5 h-3.5 mx-0.5" />}{t.ui.languageBannerSwitchLang}
-      </button>
-      <button
-        onClick={dismiss}
-        className="text-muted-foreground hover:text-foreground transition-colors"
-        aria-label="Dismiss"
-      >
-        <X className="w-3.5 h-3.5" />
-      </button>
-    </div>
-  ) : null
 
   // Bar visible: controls (+ optional banner) inside it
   if (hasBar) {
@@ -312,11 +272,11 @@ export default function GlobalNav() {
                 style={animateBackLink ? fade('0.4s') : undefined}
               >
                 <Link
-                  to={lang === 'en' ? '/en' : '/'}
+                  to="/"
                   className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors shrink-0"
                 >
                   <House className="w-4 h-4" />
-                  <span className="hidden sm:inline">santifer.io</span>
+                  <span className="hidden sm:inline">Vikas Chowdary</span>
                 </Link>
                 {pageTitle && (
                   <>
@@ -340,9 +300,8 @@ export default function GlobalNav() {
               </nav>
             )}
           </div>
-          {/* Right: banner + controls on same line */}
+          {/* Right: controls */}
           <div className="flex items-center gap-3 shrink-0">
-            {bannerMessage}
             {controls}
           </div>
         </div>
@@ -350,23 +309,12 @@ export default function GlobalNav() {
     )
   }
 
-  // Home: controls always fixed at same position, banner bar grows behind them
+  // Home: fixed controls
   if (!hydrated) return null
 
   return (
-    <>
-      {/* Translucent bar — appears/disappears without moving controls */}
-      {showBanner && (
-        <div
-          className="fixed top-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-md border-b border-border"
-          style={{ height: 'calc(1rem + 2.5rem + 0.75rem)', ...(animateBanner ? fade('0.35s') : {}) }}
-        />
-      )}
-      {/* Controls + banner — always at same fixed position */}
-      <div className="fixed top-4 right-6 z-50 flex items-center gap-3">
-        {bannerMessage}
-        {controls}
-      </div>
-    </>
+    <div className="fixed top-4 right-6 z-50 flex items-center gap-3">
+      {controls}
+    </div>
   )
 }
