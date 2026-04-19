@@ -3,13 +3,13 @@ export const seo = {
     title:
       'Vikas Chowdary | Senior Distributed Systems Engineer',
     description:
-      'Senior distributed systems engineer designing and operating large-scale, low-latency data and telemetry platforms at Salesforce. Expert in Kafka, HBase, Trino, Spark.',
+      'Senior distributed systems engineer with 5+ years operating large-scale telemetry platforms at Salesforce. Ask my AI chatbot about my work.',
   },
   en: {
     title:
       'Vikas Chowdary | Senior Distributed Systems Engineer',
     description:
-      'Senior distributed systems engineer with deep experience designing and operating large-scale, low-latency data and telemetry platforms. Proven track record owning production systems at Salesforce handling billions of events per minute.',
+      'Senior distributed systems engineer with 5+ years operating large-scale telemetry platforms at Salesforce. Ask my AI chatbot about my work.',
   },
 };
 

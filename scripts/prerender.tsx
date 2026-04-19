@@ -22,27 +22,10 @@ import Critters from 'critters';
 import App from '../src/App.tsx';
 import GlobalNav from '../src/GlobalNav.tsx';
 import { articleRegistry, type ArticleConfig } from '../src/articles/registry.ts';
-import { buildArticleJsonLd } from '../src/articles/json-ld.ts';
 import AboutPage from '../src/AboutPage.tsx';
 import { aboutContent } from '../src/about-i18n.ts';
 import PrivacyPolicy from '../src/PrivacyPolicy.tsx';
 import { seo } from '../src/i18n.ts';
-import { n8nContent } from '../src/n8n-i18n.ts';
-import { jacoboContent } from '../src/jacobo-i18n.ts';
-import { businessOsContent } from '../src/business-os-i18n.ts';
-import { pseoContent } from '../src/pseo-i18n.ts';
-import { chatbotContent } from '../src/chatbot-i18n.ts';
-import { careerOpsContent } from '../src/career-ops-i18n.ts';
-
-// Map article id → i18n content for JSON-LD generation
-const i18nMap: Record<string, Record<string, { header: { h1: string }; nav: { breadcrumbHome: string; breadcrumbCurrent: string }; faq: { items: readonly { q: string; a: string }[] } }>> = {
-  'n8n-for-pms': n8nContent,
-  'jacobo': jacoboContent,
-  'business-os': businessOsContent,
-  'programmatic-seo': pseoContent,
-  'self-healing-chatbot': chatbotContent,
-  'career-ops': careerOpsContent,
-};
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -352,7 +335,7 @@ function buildArticlePage(
     .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${esc(articleSeo.title)}" />`)
     .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${esc(articleSeo.description)}" />`)
     // OG image — replace with article-specific image if configured
-    .replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${esc(config.ogImage || 'https://santifer.io/og-image.webp')}" />`)
+    .replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${esc(config.ogImage || 'https://santifer.io/foto-avatar.webp')}" />`)
     .replace(/<meta property="og:image:alt" content="[^"]*" \/>/, `<meta property="og:image:alt" content="${esc(articleSeo.title)}" />`)
     .replace(/<meta name="twitter:image" content="[^"]*" \/>/, config.ogImage ? `<meta name="twitter:image" content="${esc(config.ogImage)}" />` : '');
 
@@ -368,44 +351,7 @@ function buildArticlePage(
     result = result.replace('</head>', `    ${articleMetaTags}\n  </head>`);
   }
 
-  // Inject article JSON-LD (replace homepage Person/WebSite schema)
-  const i18n = i18nMap[config.id];
-  if (seoMeta && i18n) {
-    const t = i18n[lang];
-    if (t) {
-      const jsonLd = buildArticleJsonLd({
-        lang,
-        url: `https://santifer.io/${slug}`,
-        altUrl: `https://santifer.io/${altSlug}`,
-        headline: t.header.h1,
-        alternativeHeadline: articleSeo.title,
-        description: articleSeo.description,
-        datePublished: seoMeta.datePublished,
-        dateModified: seoMeta.dateModified,
-        keywords: seoMeta.keywords,
-        images: config.heroImage ? [config.heroImage] : seoMeta.images,
-        breadcrumbHome: t.nav.breadcrumbHome,
-        breadcrumbCurrent: t.nav.breadcrumbCurrent,
-        faq: t.faq.items,
-        articleType: seoMeta.articleType,
-        about: seoMeta.about,
-        extra: seoMeta.extra,
-        citation: seoMeta.citation,
-        isBasedOn: seoMeta.isBasedOn,
-        mentions: seoMeta.mentions,
-        discussionUrl: seoMeta.discussionUrl,
-        relatedLink: seoMeta.relatedLink,
-        video: seoMeta.video,
-        subjectOf: seoMeta.subjectOf,
-      });
-      const jsonLdScript = `<script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n</script>`;
-      // Replace the homepage JSON-LD with article-specific one
-      result = result.replace(
-        /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
-        jsonLdScript,
-      );
-    }
-  }
+  // Article registry is empty — no article JSON-LD to inject
 
   return result;
 }

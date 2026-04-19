@@ -33,30 +33,9 @@ interface Target {
   description: string
 }
 
-const CAREER_OPS_I18N = resolve(__dirname, '../src/career-ops-i18n.ts')
 const I18N = resolve(__dirname, '../src/i18n.ts')
 
 const TARGETS: Target[] = [
-  // ES — career-ops-i18n.ts
-  { file: CAREER_OPS_I18N, locale: 'es', format: 'full', description: 'tldr ES',
-    pattern: /(\d[\d.,]*)\+\s+en Discord/ },
-  { file: CAREER_OPS_I18N, locale: 'es', format: 'full', description: 'body ES',
-    pattern: /más de (\d[\d.,]*) personas en Discord/ },
-  { file: CAREER_OPS_I18N, locale: 'es', format: 'full', description: 'communityBody ES',
-    pattern: /communityBody:\s*'(\d[\d.,]*)\+\s*builders ya usan Career-Ops/ },
-  { file: CAREER_OPS_I18N, locale: 'es', format: 'full', description: 'FAQ ES (supera)',
-    pattern: /comunidad en Discord ya supera las (\d[\d.,]*) personas/ },
-
-  // EN — career-ops-i18n.ts
-  { file: CAREER_OPS_I18N, locale: 'en', format: 'full', description: 'tldr EN',
-    pattern: /(\d[\d.,]*)\+\s+on Discord/ },
-  { file: CAREER_OPS_I18N, locale: 'en', format: 'full', description: 'body EN',
-    pattern: /A community of (\d[\d.,]*)\+\s+people formed on Discord/ },
-  { file: CAREER_OPS_I18N, locale: 'en', format: 'full', description: 'communityBody EN',
-    pattern: /communityBody:\s*'(\d[\d.,]*)\+\s*builders already use Career-Ops/ },
-  { file: CAREER_OPS_I18N, locale: 'en', format: 'full', description: 'FAQ EN (is now)',
-    pattern: /Discord community is now (\d[\d.,]*)\+\s+people/ },
-
   // i18n.ts — compact service cards
   { file: I18N, locale: 'es', format: 'short', description: 'service card ES',
     pattern: /comunidad Discord \((\d[\d.,]*K?)\+\s*miembros\)/ },
