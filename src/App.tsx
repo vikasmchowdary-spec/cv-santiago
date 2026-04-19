@@ -1760,10 +1760,6 @@ function App() {
                   <span>{t.skills.spanish}</span>
                   <span className="text-sm text-primary font-medium">{t.skills.native}</span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span>{t.skills.english}</span>
-                  <span className="text-sm text-muted-foreground">{t.skills.professional}</span>
-                </div>
               </div>
 
               <h3 className="font-display font-semibold mb-4 mt-8">{t.skills.soft}</h3>
