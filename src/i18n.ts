@@ -37,8 +37,8 @@ export const translations = {
         'Listo para el siguiente capítulo.',
       ],
       nav: [
-        { icon: 'briefcase', label: 'Mi camino', href: '#experience' },
-        { icon: 'folder', label: 'Lo que construyo', href: '#tech' },
+        { icon: 'briefcase', label: 'Mi camino', href: '#timeline' },
+        { icon: 'folder', label: 'Lo que construyo', href: '#build' },
         { icon: 'mail', label: 'Hablemos', href: '#contact' },
         { icon: 'bot', label: 'Pregúntame', href: '#chat', highlight: true },
       ],
@@ -760,10 +760,10 @@ export const translations = {
     skills: {
       title: 'Competencias',
       languages: 'Idiomas',
-      spanish: 'Español',
+      spanish: 'English',
       native: 'Nativo',
-      english: 'Inglés',
-      professional: 'Profesional fluido',
+      english: 'English',
+      professional: 'Nativo',
       technical: 'Habilidades Técnicas',
       soft: 'Soft Skills',
       softSkills: [
@@ -861,8 +861,8 @@ export const translations = {
         "Ready for what's next.",
       ],
       nav: [
-        { icon: 'briefcase', label: 'My path', href: '#experience' },
-        { icon: 'folder', label: 'What I build', href: '#tech' },
+        { icon: 'briefcase', label: 'My path', href: '#timeline' },
+        { icon: 'folder', label: 'What I build', href: '#build' },
         { icon: 'mail', label: "Let's talk", href: '#contact' },
         { icon: 'bot', label: 'Ask me', href: '#chat', highlight: true },
       ],
@@ -1022,15 +1022,15 @@ export const translations = {
         company: 'Oracle Cloud Infrastructure',
         location: 'Remote',
         role: 'Senior Software Engineer',
-        period: 'Before 2020',
+        period: 'May 2018 – Jan 2020',
         caseStudyUrl: '',
         caseStudyLabel: '',
         exit: '',
         exitDesc: '',
         highlights: [
-          'Built and maintained distributed data services for Oracle Cloud Infrastructure',
-          'Worked on high-throughput, low-latency storage and compute primitives',
-          'Contributed to reliability engineering and on-call incident response',
+          'Deployed multi-region Prometheus monitoring for large-scale cloud infrastructure',
+          'Built rate-limiting in Alert Manager pipelines preventing cascading failures',
+          'Bootstrapped Kafka, Zookeeper, and time-series databases across production regions',
         ],
         trustedBy: {
           label: '',
@@ -1076,8 +1076,8 @@ export const translations = {
         company: 'Tintri',
         location: 'Mountain View, CA',
         role: 'Software Engineer',
-        period: 'Before Oracle',
-        desc: 'Worked on distributed storage systems and data management software for enterprise virtualization environments.',
+        period: 'Dec 2014 – May 2018',
+        desc: 'Designed distributed replication systems supporting petabyte-scale data. Built Java backend services for storage and compute management. Led engineering across design and implementation of complex system features.',
         testimonial: {
           quote: '',
           author: '',
@@ -1087,8 +1087,8 @@ export const translations = {
       everis: {
         company: 'Cisco Systems',
         role: 'Software Engineer',
-        period: 'Early Career',
-        desc: 'Contributed to networking and infrastructure software at Cisco Systems.',
+        period: 'Aug 2010 – Nov 2014',
+        desc: 'Developed QoS features for Nexus 9000: flow classification, scheduling, and storm protection.',
         tesauro: {
           title: '',
           desc: '',
@@ -1252,10 +1252,10 @@ export const translations = {
     skills: {
       title: 'Skills',
       languages: 'Languages',
-      spanish: 'Spanish',
+      spanish: 'English',
       native: 'Native',
       english: 'English',
-      professional: 'Professional proficiency',
+      professional: 'Native',
       technical: 'Technical Skills',
       soft: 'Soft Skills',
       softSkills: [

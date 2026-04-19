@@ -1545,7 +1545,7 @@ function App() {
 
           {/* Preámbulo: Cómo trabajo + Competencias */}
           <AnimatedSection delay={0.1}>
-            <div className="mb-12 p-6 rounded-2xl bg-card/50">
+            <div id="build" className="mb-12 p-6 rounded-2xl bg-card/50">
               <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-6">
                 {t.summary.p2} <span className="text-foreground font-medium">{t.summary.p2Highlight}</span>{t.summary.p2End}
               </p>
@@ -1568,7 +1568,7 @@ function App() {
 
           {/* Zinkee */}
           <AnimatedSection delay={0.1}>
-            <div className="mb-12">
+            <div id="timeline" className="mb-12">
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-2">
                 <div className="flex items-center gap-3">
                   <img src="/zinkee-logo.webp" alt="Zinkee" className="w-10 h-10 shrink-0" width={40} height={40} loading="lazy" decoding="async" />
