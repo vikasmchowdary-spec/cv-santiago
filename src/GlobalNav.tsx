@@ -1,8 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Sun, Moon, House, X, ChevronRight } from 'lucide-react'
-import { translations, type Lang } from './i18n'
-import { getAltPaths, getPageTitles, getSectionLabels, getEsSlugs } from './articles/registry'
+import { Sun, Moon, House, ChevronRight } from 'lucide-react'
+import { getPageTitles, getSectionLabels, getEsSlugs } from './articles/registry'
 
 /**
  * GlobalNav — unified navigation across all pages.
@@ -17,8 +16,6 @@ import { getAltPaths, getPageTitles, getSectionLabels, getEsSlugs } from './arti
  * when there's no bar (home, no banner), controls float fixed at top-6 right-6.
  */
 
-const ALT_PATH = getAltPaths()
-const BANNER_DISMISSED_KEY = 'lang-banner-dismissed'
 const PAGE_TITLE = getPageTitles()
 const SECTION_LABELS = getSectionLabels()
 const ES_SLUGS = getEsSlugs()
@@ -132,82 +129,6 @@ function useTheme() {
   return { isDark, toggleTheme }
 }
 
-/**
- * Detects browser/page language mismatch.
- * Uses sessionStorage to survive re-mounts across navigations:
- * - null: not shown yet → show after 2s delay
- * - 'shown': already visible → show immediately, no animation
- * - 'dismissed': user closed it → never show again
- */
-function useLanguageBanner(lang: Lang) {
-  const stored = typeof sessionStorage !== 'undefined' ? sessionStorage.getItem(BANNER_DISMISSED_KEY) : null
-  const [visible, setVisible] = useState(stored === 'shown')
-  const isFirstAppearance = useRef(stored !== 'shown')
-
-  // Show after delay on first visit (no sessionStorage entry yet)
-  useEffect(() => {
-    if (typeof navigator === 'undefined') return
-    if (stored) return // already 'shown' or 'dismissed'
-
-    const browserPrefersEn = !navigator.language.toLowerCase().startsWith('es')
-    const mismatch = (lang === 'es' && browserPrefersEn) || (lang === 'en' && !browserPrefersEn)
-    if (!mismatch) return
-
-    const timer = setTimeout(() => {
-      sessionStorage.setItem(BANNER_DISMISSED_KEY, 'shown')
-      setVisible(true)
-    }, 2000)
-    return () => clearTimeout(timer)
-  }, [lang, stored])
-
-  // Auto-dismiss if user switches language via toggle
-  useEffect(() => {
-    if (!visible) return
-    const browserPrefersEn = !navigator.language.toLowerCase().startsWith('es')
-    const mismatch = (lang === 'es' && browserPrefersEn) || (lang === 'en' && !browserPrefersEn)
-    if (!mismatch) {
-      sessionStorage.setItem(BANNER_DISMISSED_KEY, 'dismissed')
-      setVisible(false)
-    }
-  }, [lang, visible])
-
-  const dismiss = useCallback(() => {
-    sessionStorage.setItem(BANNER_DISMISSED_KEY, 'dismissed')
-    setVisible(false)
-  }, [])
-
-  return { showBanner: visible, dismiss, animateBanner: visible && isFirstAppearance.current }
-}
-
-/** Circular flag icons — Spain (red-yellow-red) and UK (Union Jack simplified) */
-function FlagES({ className = "w-4 h-4" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 16 16" aria-hidden="true">
-      <clipPath id="flagCircleES"><circle cx="8" cy="8" r="8" /></clipPath>
-      <g clipPath="url(#flagCircleES)">
-        <rect y="0" width="16" height="4" fill="#c60b1e" />
-        <rect y="4" width="16" height="8" fill="#ffc400" />
-        <rect y="12" width="16" height="4" fill="#c60b1e" />
-      </g>
-    </svg>
-  )
-}
-
-function FlagEN({ className = "w-4 h-4" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 16 16" aria-hidden="true">
-      <clipPath id="flagCircleEN"><circle cx="8" cy="8" r="8" /></clipPath>
-      <g clipPath="url(#flagCircleEN)">
-        <rect width="16" height="16" fill="#012169" />
-        <path d="M0 0L16 16M16 0L0 16" stroke="#fff" strokeWidth="2.5" />
-        <path d="M0 0L16 16M16 0L0 16" stroke="#c8102e" strokeWidth="1.5" />
-        <path d="M8 0V16M0 8H16" stroke="#fff" strokeWidth="4" />
-        <path d="M8 0V16M0 8H16" stroke="#c8102e" strokeWidth="2.5" />
-      </g>
-    </svg>
-  )
-}
-
 /** Shared controls: theme circle only */
 function NavControls({ isDark, toggleTheme }: {
   isDark: boolean; toggleTheme: () => void
@@ -226,11 +147,10 @@ function NavControls({ isDark, toggleTheme }: {
 }
 
 export default function GlobalNav() {
-  const { pathname, isHome, lang, pageTitle } = useLang()
+  const { pathname, isHome, pageTitle } = useLang()
   const { isDark, toggleTheme } = useTheme()
   const activeSection = useActiveSection(pathname, !isHome)
 
-  const t = translations[lang]
   const hasBar = !isHome
 
   // Breadcrumb: show active section label or fall back to page title

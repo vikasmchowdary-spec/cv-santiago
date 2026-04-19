@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useMemo, useReducer, useRef } from 'react'
-import { useLocation, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { Mail, ExternalLink, Briefcase, GraduationCap, Award, Code, Users, Globe, Bot, Zap, Database, Layout, BadgeCheck, FolderGit2, Sparkles, Download, Github, Package, MessageSquare, Receipt, CalendarCheck, FileText, GitBranch, GitFork, Star, Network, Calendar, Percent, UserCheck, Image, TrendingUp, Timer, SkipForward, ThumbsUp, MessageCircle, Share2, ChevronRight, List, ArrowUp, Brain, Target, Inbox, Compass, GitMerge } from 'lucide-react'
+import { Mail, ExternalLink, Briefcase, GraduationCap, Award, Code, Globe, Bot, Zap, Database, BadgeCheck, FolderGit2, SkipForward, List } from 'lucide-react'
 import { translations, seo, type Lang } from './i18n'
 import { useHomeSeo } from './articles/use-article-seo'
 import { getTechIcon } from './tech-icons'
@@ -1428,7 +1428,6 @@ function CertLogo({ logo }: { logo: string }) {
 }
 
 function App() {
-  const location = useLocation()
   const lang: Lang = 'en'
   const t = translations[lang]
   const hydrated = useHydrated()
@@ -1688,27 +1687,6 @@ function App() {
                           </p>
                         </div>
                       </div>
-                      {/* Testimonial if exists */}
-                      {'testimonial' in item && item.testimonial && (
-                        <a href="https://www.linkedin.com/in/santifer/details/recommendations/" target="_blank" rel="noopener noreferrer" className="block group">
-                          <blockquote className="mt-4 p-4 rounded-xl bg-primary/5 border border-primary/10 group-hover:border-[hsl(var(--linkedin)/0.3)] transition-colors">
-                            <p className="text-sm text-muted-foreground italic mb-4">
-                              "{item.testimonial.quote}"
-                            </p>
-                            <footer className="flex items-center gap-3">
-                              <picture>
-                                <source srcSet={item.testimonial.photo.replace(/\.(png|jpg|jpeg)$/i, '.webp')} type="image/webp" />
-                                <img src={item.testimonial.photo} alt={item.testimonial.author} className="w-10 h-10 rounded-full object-cover" width={40} height={40} loading="lazy" decoding="async" />
-                              </picture>
-                              <div className="flex-1">
-                                <span className="text-sm font-medium text-foreground block">{item.testimonial.author}</span>
-                                <span className="text-xs text-muted-foreground">{item.testimonial.role}</span>
-                              </div>
-                              <LinkedInLogo className="w-4 h-4 text-[hsl(var(--linkedin))]" />
-                            </footer>
-                          </blockquote>
-                        </a>
-                      )}
                     </div>
                   </AnimatedSection>
                 ))}
@@ -1717,6 +1695,7 @@ function App() {
             </div>
 
             {/* Certifications */}
+            {t.certifications.items.length > 0 && (
             <div>
               <AnimatedSection>
                 <h2 className="font-display text-2xl font-semibold mb-8 flex items-center gap-3">
@@ -1728,8 +1707,7 @@ function App() {
               </AnimatedSection>
 
               <div className="space-y-1 rounded-xl overflow-hidden border border-border">
-                {t.certifications.items.map((cert, i) => {
-                  // Alternate background by logical group: 0-3 tech, 4-7 fluency, 8-10 airtable, 11 make
+                {(t.certifications.items as unknown as Array<{ url: string; year: string; title: string; org: string; logo: string }>).map((cert, i) => {
                   const group = i < 4 ? 0 : i < 8 ? 1 : i < 11 ? 2 : 3
                   const isAlt = group % 2 === 1
                   return (
@@ -1754,6 +1732,7 @@ function App() {
                 })}
               </div>
             </div>
+            )}
           </div>
         </div>
       </section>

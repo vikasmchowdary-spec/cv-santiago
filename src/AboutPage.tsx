@@ -263,7 +263,7 @@ export default function AboutPage({ lang = 'es' }: { lang?: AboutLang }) {
             {t.certificationsHeading}
           </h2>
           <div className="space-y-3">
-            {t.certifications.map((cert) => (
+            {(t.certifications as unknown as Array<{ org: string; items: string[] }>).map((cert) => (
               <div key={cert.org} className="p-3 rounded-lg bg-card border border-border">
                 <p className="font-medium text-foreground text-sm mb-1">{cert.org}</p>
                 <div className="flex flex-wrap gap-1.5">
@@ -295,7 +295,7 @@ export default function AboutPage({ lang = 'es' }: { lang?: AboutLang }) {
             <Newspaper className="w-4 h-4 text-primary" />
             {t.pressHeading}
           </h2>
-          {t.press.map((item) => (
+          {(t.press as unknown as Array<{ href: string; title: string; publisher: string; date: string }>).map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -319,7 +319,7 @@ export default function AboutPage({ lang = 'es' }: { lang?: AboutLang }) {
             {t.communityHeading}
           </h2>
           <div className="space-y-2">
-            {t.community.map((item) => (
+            {(t.community as unknown as Array<{ href: string; title: string; platform: string }>).map((item) => (
               <a
                 key={item.href}
                 href={item.href}
