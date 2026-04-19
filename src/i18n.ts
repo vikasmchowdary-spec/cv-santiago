@@ -38,7 +38,7 @@ export const translations = {
       ],
       nav: [
         { icon: 'briefcase', label: 'Mi camino', href: '#experience' },
-        { icon: 'folder', label: 'Lo que construyo', href: '#projects' },
+        { icon: 'folder', label: 'Lo que construyo', href: '#tech' },
         { icon: 'mail', label: 'Hablemos', href: '#contact' },
         { icon: 'bot', label: 'Pregúntame', href: '#chat', highlight: true },
       ],
@@ -862,7 +862,7 @@ export const translations = {
       ],
       nav: [
         { icon: 'briefcase', label: 'My path', href: '#experience' },
-        { icon: 'folder', label: 'What I build', href: '#projects' },
+        { icon: 'folder', label: 'What I build', href: '#tech' },
         { icon: 'mail', label: "Let's talk", href: '#contact' },
         { icon: 'bot', label: 'Ask me', href: '#chat', highlight: true },
       ],
