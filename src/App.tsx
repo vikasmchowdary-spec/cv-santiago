@@ -1577,8 +1577,19 @@ function App() {
                 <span className="text-sm text-muted-foreground">{t.experience.zinkee.location}</span>
               </div>
               <p className="text-primary font-medium mb-1">{t.experience.zinkee.role}</p>
-              <p className="text-sm text-muted-foreground mb-2">{t.experience.zinkee.period}</p>
-              <p className="text-muted-foreground whitespace-pre-line">{t.experience.zinkee.desc}</p>
+              <p className="text-sm text-muted-foreground mb-4">{t.experience.zinkee.period}</p>
+              {'highlights' in t.experience.zinkee && (t.experience.zinkee as { highlights: readonly string[] }).highlights.length > 0 ? (
+                <ul className="space-y-2">
+                  {(t.experience.zinkee as { highlights: readonly string[] }).highlights.map((h, i) => (
+                    <li key={i} className="flex items-start gap-2 text-muted-foreground">
+                      <span className="text-primary mt-1 shrink-0">▸</span>
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-muted-foreground whitespace-pre-line">{t.experience.zinkee.desc}</p>
+              )}
             </div>
           </AnimatedSection>
 
@@ -1826,7 +1837,7 @@ function App() {
                 {t.cta.contact}
               </a>
               <a
-                href="https://www.linkedin.com/in/vikas-chowdary-meka/"
+                href="https://www.linkedin.com/in/vikas-mchowdary-75b20b149/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border hover:border-primary/50 transition-colors duration-200 hover:bg-primary/5"

@@ -297,7 +297,7 @@ function buildArticlePage(
     const articleMetaTags = [
       `<meta property="article:published_time" content="${seoMeta.datePublished}" />`,
       `<meta property="article:modified_time" content="${seoMeta.dateModified}" />`,
-      `<meta property="article:author" content="https://www.linkedin.com/in/santifer" />`,
+      `<meta property="article:author" content="https://www.linkedin.com/in/vikas-mchowdary-75b20b149/" />`,
       `<meta property="article:tag" content="${esc(seoMeta.articleTags)}" />`,
     ].join('\n    ');
     result = result.replace('</head>', `    ${articleMetaTags}\n  </head>`);
